@@ -13,16 +13,20 @@
 		ADFB0AD4162C99AB00AC5954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0AC1162C99AB00AC5954 /* Foundation.framework */; };
 		ADFB0AD7162C99AB00AC5954 /* libDXHTTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0ABE162C99AB00AC5954 /* libDXHTTPKit.a */; };
 		ADFB0ADD162C99AB00AC5954 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADFB0ADB162C99AB00AC5954 /* InfoPlist.strings */; };
-		D95AACDC163593F200FFD2C1 /* DXHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D95AACDB163593F200FFD2C1 /* DXHTTPConnection.m */; };
+		D95AACDC163593F200FFD2C1 /* DXHTTPConnectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D95AACDB163593F200FFD2C1 /* DXHTTPConnectionSpec.m */; };
 		D95AACEC16359C8400FFD2C1 /* DXHTTPConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D95AACE816359C8400FFD2C1 /* DXHTTPConnectionOperation.m */; };
 		D95AACED16359C8400FFD2C1 /* DXHTTPConnectionThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D95AACEB16359C8400FFD2C1 /* DXHTTPConnectionThread.m */; };
 		D9D0547B1632ADA60044A2F9 /* DXHTTPFormBodyStreamBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D0547A1632ADA60044A2F9 /* DXHTTPFormBodyStreamBuilderSpec.m */; };
-		EA07F9881634299100376BD3 /* DXHTTPKitErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = EA07F9871634299100376BD3 /* DXHTTPKitErrors.m */; };
 		EA07F98B16342AD600376BD3 /* DXHTTPFormBodyStreamBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA07F98A16342AD600376BD3 /* DXHTTPFormBodyStreamBuilder.m */; };
 		EA28F37D1634590B00D5D00A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA28F37C1634590B00D5D00A /* MobileCoreServices.framework */; };
 		EA28F38116345AF200D5D00A /* DXHTTPURLRequestAdditionalsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA28F38016345AF200D5D00A /* DXHTTPURLRequestAdditionalsBuilder.m */; };
+		EA3B7DCD1635E2460091D7A5 /* DXHTTPRequestDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B7DCC1635E2460091D7A5 /* DXHTTPRequestDescriptor.m */; };
+		EA3B7DD01635E2510091D7A5 /* DXHTTPParamKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B7DCF1635E2510091D7A5 /* DXHTTPParamKey.m */; };
+		EA3B7DD31635E25B0091D7A5 /* DXHTTPKitErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B7DD21635E25B0091D7A5 /* DXHTTPKitErrors.m */; };
 		EA3EB4F31631963500547FED /* DXHTTPFormParamsBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB4F21631963500547FED /* DXHTTPFormParamsBuilderSpec.m */; };
 		EA3EB519163211FD00547FED /* DXHTTPFormParamsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB518163211FD00547FED /* DXHTTPFormParamsBuilder.m */; };
+		EA62E4871635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */; };
+		EA62E48B1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */; };
 		EA76B4E516309D2E004B85CA /* DXHTTPRequestBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4E416309D2E004B85CA /* DXHTTPRequestBuilderSpec.m */; };
 		EA76B4F11630A7D2004B85CA /* DXHTTPRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4F01630A7D2004B85CA /* DXHTTPRequestBuilder.m */; };
 		EA76B4F51630A81E004B85CA /* DXHTTPHeadersBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4F41630A81E004B85CA /* DXHTTPHeadersBuilder.m */; };
@@ -31,10 +35,8 @@
 		EAB5F43D162D869900A7E403 /* DXHTTPFormParamSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F439162D869900A7E403 /* DXHTTPFormParamSpec.m */; };
 		EAB5F43E162D869900A7E403 /* DXHTTPHeadersStorageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F43A162D869900A7E403 /* DXHTTPHeadersStorageSpec.m */; };
 		EAB5F43F162D869900A7E403 /* DXHTTPFormFileDescriptorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F43B162D869900A7E403 /* DXHTTPFormFileDescriptorSpec.m */; };
-		EAB5F442162D86C700A7E403 /* DXHTTPParamKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F441162D86C700A7E403 /* DXHTTPParamKey.m */; };
 		EAB5F445162D86D800A7E403 /* DXHTTPHeadersStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F444162D86D800A7E403 /* DXHTTPHeadersStorage.m */; };
 		EAB5F448162D870200A7E403 /* DXHTTPFormFileDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F447162D870200A7E403 /* DXHTTPFormFileDescriptor.m */; };
-		EAB5F44E162D873E00A7E403 /* DXHTTPRequestDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F44D162D873E00A7E403 /* DXHTTPRequestDescriptor.m */; };
 		EAB5F451162D8B8F00A7E403 /* DXHTTPFormParam.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F450162D8B8F00A7E403 /* DXHTTPFormParam.m */; };
 		EACB3FCE1633F8F700BC62B7 /* DXHTTPFormPartElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EACB3FCD1633F8F700BC62B7 /* DXHTTPFormPartElement.m */; };
 /* End PBXBuildFile section */
@@ -71,7 +73,7 @@
 		ADFB0AD0162C99AB00AC5954 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ADFB0ADA162C99AB00AC5954 /* DXHTTPKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DXHTTPKitTests-Info.plist"; sourceTree = "<group>"; };
 		ADFB0ADC162C99AB00AC5954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D95AACDB163593F200FFD2C1 /* DXHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnection.m; sourceTree = "<group>"; };
+		D95AACDB163593F200FFD2C1 /* DXHTTPConnectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnectionSpec.m; sourceTree = "<group>"; };
 		D95AACE716359C8400FFD2C1 /* DXHTTPConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPConnectionOperation.h; sourceTree = "<group>"; };
 		D95AACE816359C8400FFD2C1 /* DXHTTPConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnectionOperation.m; sourceTree = "<group>"; };
 		D95AACEA16359C8400FFD2C1 /* DXHTTPConnectionThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPConnectionThread.h; sourceTree = "<group>"; };
@@ -79,33 +81,36 @@
 		D9D0547A1632ADA60044A2F9 /* DXHTTPFormBodyStreamBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormBodyStreamBuilderSpec.m; sourceTree = "<group>"; };
 		D9D0547D1632B4390044A2F9 /* DXHTTPFormBodyStreamBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPFormBodyStreamBuilder.h; sourceTree = "<group>"; };
 		D9D054821632B7180044A2F9 /* DXHTTPFormPartElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPFormPartElement.h; path = DXHTTPFormFileElement/DXHTTPFormPartElement.h; sourceTree = "<group>"; };
-		EA07F9871634299100376BD3 /* DXHTTPKitErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPKitErrors.m; sourceTree = "<group>"; };
 		EA07F98A16342AD600376BD3 /* DXHTTPFormBodyStreamBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormBodyStreamBuilder.m; sourceTree = "<group>"; };
 		EA28F37C1634590B00D5D00A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EA28F37F16345AF200D5D00A /* DXHTTPURLRequestAdditionalsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPURLRequestAdditionalsBuilder.h; path = Builders/DXHTTPURLRequestAdditionalsBuilder/DXHTTPURLRequestAdditionalsBuilder.h; sourceTree = "<group>"; };
 		EA28F38016345AF200D5D00A /* DXHTTPURLRequestAdditionalsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPURLRequestAdditionalsBuilder.m; path = Builders/DXHTTPURLRequestAdditionalsBuilder/DXHTTPURLRequestAdditionalsBuilder.m; sourceTree = "<group>"; };
+		EA3B7DCB1635E2460091D7A5 /* DXHTTPRequestDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPRequestDescriptor.h; path = DXHTTPRequestDescriptor/DXHTTPRequestDescriptor.h; sourceTree = "<group>"; };
+		EA3B7DCC1635E2460091D7A5 /* DXHTTPRequestDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPRequestDescriptor.m; path = DXHTTPRequestDescriptor/DXHTTPRequestDescriptor.m; sourceTree = "<group>"; };
+		EA3B7DCE1635E2510091D7A5 /* DXHTTPParamKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPParamKey.h; path = DXHTTPRequestDescriptor/DXHTTPParamKey/DXHTTPParamKey.h; sourceTree = "<group>"; };
+		EA3B7DCF1635E2510091D7A5 /* DXHTTPParamKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPParamKey.m; path = DXHTTPRequestDescriptor/DXHTTPParamKey/DXHTTPParamKey.m; sourceTree = "<group>"; };
+		EA3B7DD11635E25B0091D7A5 /* DXHTTPKitErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPKitErrors.h; path = DXHTTPKitErros/DXHTTPKitErrors.h; sourceTree = "<group>"; };
+		EA3B7DD21635E25B0091D7A5 /* DXHTTPKitErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPKitErrors.m; path = DXHTTPKitErros/DXHTTPKitErrors.m; sourceTree = "<group>"; };
 		EA3EB4F21631963500547FED /* DXHTTPFormParamsBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParamsBuilderSpec.m; sourceTree = "<group>"; };
 		EA3EB517163211FD00547FED /* DXHTTPFormParamsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPFormParamsBuilder.h; sourceTree = "<group>"; };
 		EA3EB518163211FD00547FED /* DXHTTPFormParamsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParamsBuilder.m; sourceTree = "<group>"; };
+		EA62E4851635DAD8008A9BFE /* DXHTTPConnectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPConnectionDescriptor.h; path = DXHTTPConnectionDescriptor/DXHTTPConnectionDescriptor.h; sourceTree = "<group>"; };
+		EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPConnectionDescriptor.m; path = DXHTTPConnectionDescriptor/DXHTTPConnectionDescriptor.m; sourceTree = "<group>"; };
+		EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnectionDescriptorSpec.m; sourceTree = "<group>"; };
 		EA76B4E416309D2E004B85CA /* DXHTTPRequestBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPRequestBuilderSpec.m; sourceTree = "<group>"; };
 		EA76B4EF1630A7D2004B85CA /* DXHTTPRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPRequestBuilder.h; path = Builders/DXHTTPRequestBuilder/DXHTTPRequestBuilder.h; sourceTree = "<group>"; };
 		EA76B4F01630A7D2004B85CA /* DXHTTPRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPRequestBuilder.m; path = Builders/DXHTTPRequestBuilder/DXHTTPRequestBuilder.m; sourceTree = "<group>"; };
 		EA76B4F31630A81E004B85CA /* DXHTTPHeadersBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPHeadersBuilder.h; path = Builders/DXHTTPHeadersBuilder/DXHTTPHeadersBuilder.h; sourceTree = "<group>"; };
 		EA76B4F41630A81E004B85CA /* DXHTTPHeadersBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPHeadersBuilder.m; path = Builders/DXHTTPHeadersBuilder/DXHTTPHeadersBuilder.m; sourceTree = "<group>"; };
 		EA76B4F71630A9ED004B85CA /* DXHTTPHeadersBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPHeadersBuilderSpec.m; sourceTree = "<group>"; };
-		EAB5DD17163017A1006AEB97 /* DXHTTPKitErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPKitErrors.h; sourceTree = "<group>"; };
 		EAB5F438162D869900A7E403 /* DXHTTPRequestDescriptorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPRequestDescriptorSpec.m; sourceTree = "<group>"; };
 		EAB5F439162D869900A7E403 /* DXHTTPFormParamSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParamSpec.m; sourceTree = "<group>"; };
 		EAB5F43A162D869900A7E403 /* DXHTTPHeadersStorageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPHeadersStorageSpec.m; sourceTree = "<group>"; };
 		EAB5F43B162D869900A7E403 /* DXHTTPFormFileDescriptorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormFileDescriptorSpec.m; sourceTree = "<group>"; };
-		EAB5F440162D86C700A7E403 /* DXHTTPParamKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPParamKey.h; sourceTree = "<group>"; };
-		EAB5F441162D86C700A7E403 /* DXHTTPParamKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPParamKey.m; sourceTree = "<group>"; };
 		EAB5F443162D86D800A7E403 /* DXHTTPHeadersStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPHeadersStorage.h; sourceTree = "<group>"; };
 		EAB5F444162D86D800A7E403 /* DXHTTPHeadersStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPHeadersStorage.m; sourceTree = "<group>"; };
 		EAB5F446162D870200A7E403 /* DXHTTPFormFileDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPFormFileDescriptor.h; sourceTree = "<group>"; };
 		EAB5F447162D870200A7E403 /* DXHTTPFormFileDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormFileDescriptor.m; sourceTree = "<group>"; };
-		EAB5F44C162D873E00A7E403 /* DXHTTPRequestDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPRequestDescriptor.h; sourceTree = "<group>"; };
-		EAB5F44D162D873E00A7E403 /* DXHTTPRequestDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPRequestDescriptor.m; sourceTree = "<group>"; };
 		EAB5F44F162D8B8F00A7E403 /* DXHTTPFormParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPFormParam.h; sourceTree = "<group>"; };
 		EAB5F450162D8B8F00A7E403 /* DXHTTPFormParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParam.m; sourceTree = "<group>"; };
 		EACB3FCD1633F8F700BC62B7 /* DXHTTPFormPartElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPFormPartElement.m; path = DXHTTPFormFileElement/DXHTTPFormPartElement.m; sourceTree = "<group>"; };
@@ -146,7 +151,8 @@
 				EAB5F43B162D869900A7E403 /* DXHTTPFormFileDescriptorSpec.m */,
 				EA76B4F71630A9ED004B85CA /* DXHTTPHeadersBuilderSpec.m */,
 				EA3EB4F21631963500547FED /* DXHTTPFormParamsBuilderSpec.m */,
-				D95AACDB163593F200FFD2C1 /* DXHTTPConnection.m */,
+				D95AACDB163593F200FFD2C1 /* DXHTTPConnectionSpec.m */,
+				EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -202,12 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				D95AACE516359C8400FFD2C1 /* DXHTTPConnection */,
-				EAB5F44C162D873E00A7E403 /* DXHTTPRequestDescriptor.h */,
-				EAB5F44D162D873E00A7E403 /* DXHTTPRequestDescriptor.m */,
-				EAB5F440162D86C700A7E403 /* DXHTTPParamKey.h */,
-				EAB5F441162D86C700A7E403 /* DXHTTPParamKey.m */,
-				EAB5DD17163017A1006AEB97 /* DXHTTPKitErrors.h */,
-				EA07F9871634299100376BD3 /* DXHTTPKitErrors.m */,
+				EA62E4831635D762008A9BFE /* DXHTTPRequestDescriptor */,
+				EA3B7DC81635E1DD0091D7A5 /* DXHTTPParamKey */,
+				EA3B7DCA1635E1E90091D7A5 /* DXHTTPKitErros */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			children = (
 				D95AACE616359C8400FFD2C1 /* DXHTTPConnectionOperation */,
 				D95AACE916359C8400FFD2C1 /* DXHTTPConnectionThread */,
+				EA62E4881635DADD008A9BFE /* DXHTTPConnectionDescriptor */,
 			);
 			path = DXHTTPConnection;
 			sourceTree = "<group>";
@@ -334,6 +338,24 @@
 			name = DXHTTPURLRequestAdditionalsBuilder;
 			sourceTree = "<group>";
 		};
+		EA3B7DC81635E1DD0091D7A5 /* DXHTTPParamKey */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B7DCE1635E2510091D7A5 /* DXHTTPParamKey.h */,
+				EA3B7DCF1635E2510091D7A5 /* DXHTTPParamKey.m */,
+			);
+			name = DXHTTPParamKey;
+			sourceTree = "<group>";
+		};
+		EA3B7DCA1635E1E90091D7A5 /* DXHTTPKitErros */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B7DD11635E25B0091D7A5 /* DXHTTPKitErrors.h */,
+				EA3B7DD21635E25B0091D7A5 /* DXHTTPKitErrors.m */,
+			);
+			name = DXHTTPKitErros;
+			sourceTree = "<group>";
+		};
 		EA3EB516163211FD00547FED /* DXHTTPFormParamsBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +365,24 @@
 			);
 			name = DXHTTPFormParamsBuilder;
 			path = Builders/DXHTTPFormParamsBuilder;
+			sourceTree = "<group>";
+		};
+		EA62E4831635D762008A9BFE /* DXHTTPRequestDescriptor */ = {
+			isa = PBXGroup;
+			children = (
+				EA3B7DCB1635E2460091D7A5 /* DXHTTPRequestDescriptor.h */,
+				EA3B7DCC1635E2460091D7A5 /* DXHTTPRequestDescriptor.m */,
+			);
+			name = DXHTTPRequestDescriptor;
+			sourceTree = "<group>";
+		};
+		EA62E4881635DADD008A9BFE /* DXHTTPConnectionDescriptor */ = {
+			isa = PBXGroup;
+			children = (
+				EA62E4851635DAD8008A9BFE /* DXHTTPConnectionDescriptor.h */,
+				EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */,
+			);
+			name = DXHTTPConnectionDescriptor;
 			sourceTree = "<group>";
 		};
 		EA76B4E616309E22004B85CA /* Builders */ = {
@@ -488,20 +528,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAB5F442162D86C700A7E403 /* DXHTTPParamKey.m in Sources */,
 				EAB5F445162D86D800A7E403 /* DXHTTPHeadersStorage.m in Sources */,
 				EAB5F448162D870200A7E403 /* DXHTTPFormFileDescriptor.m in Sources */,
-				EAB5F44E162D873E00A7E403 /* DXHTTPRequestDescriptor.m in Sources */,
 				EAB5F451162D8B8F00A7E403 /* DXHTTPFormParam.m in Sources */,
 				EA76B4F11630A7D2004B85CA /* DXHTTPRequestBuilder.m in Sources */,
 				EA76B4F51630A81E004B85CA /* DXHTTPHeadersBuilder.m in Sources */,
 				EA3EB519163211FD00547FED /* DXHTTPFormParamsBuilder.m in Sources */,
 				EACB3FCE1633F8F700BC62B7 /* DXHTTPFormPartElement.m in Sources */,
-				EA07F9881634299100376BD3 /* DXHTTPKitErrors.m in Sources */,
 				EA07F98B16342AD600376BD3 /* DXHTTPFormBodyStreamBuilder.m in Sources */,
 				EA28F38116345AF200D5D00A /* DXHTTPURLRequestAdditionalsBuilder.m in Sources */,
 				D95AACEC16359C8400FFD2C1 /* DXHTTPConnectionOperation.m in Sources */,
 				D95AACED16359C8400FFD2C1 /* DXHTTPConnectionThread.m in Sources */,
+				EA62E4871635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m in Sources */,
+				EA3B7DCD1635E2460091D7A5 /* DXHTTPRequestDescriptor.m in Sources */,
+				EA3B7DD01635E2510091D7A5 /* DXHTTPParamKey.m in Sources */,
+				EA3B7DD31635E25B0091D7A5 /* DXHTTPKitErrors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +558,8 @@
 				EA76B4F81630A9ED004B85CA /* DXHTTPHeadersBuilderSpec.m in Sources */,
 				EA3EB4F31631963500547FED /* DXHTTPFormParamsBuilderSpec.m in Sources */,
 				D9D0547B1632ADA60044A2F9 /* DXHTTPFormBodyStreamBuilderSpec.m in Sources */,
-				D95AACDC163593F200FFD2C1 /* DXHTTPConnection.m in Sources */,
+				D95AACDC163593F200FFD2C1 /* DXHTTPConnectionSpec.m in Sources */,
+				EA62E48B1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

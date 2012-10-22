@@ -13,6 +13,7 @@
     NSURLConnection *_urlConnection;
     NSMutableData *_connectionData;
     NSMutableDictionary *_connectionResponseHeaders;
+    NSURLCredential *_urlCredential;
     BOOL _executing;
     BOOL _finished;
 }
@@ -21,10 +22,13 @@
 
 @implementation DXHTTPConnectionOperation
 
-- (id)initWithURLRequest:(NSURLRequest *)aURLRequest {
+- (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor {
+    DXParametrAssert(aConnectionDescriptor.urlRequest, DXHTTPKitErrors.EmptyURLRequest);
+    
     self = [super init];
     if (self) {
-        _urlRequest = aURLRequest;
+        _urlCredential = aConnectionDescriptor.urlCredential;
+        _urlRequest = aConnectionDescriptor.urlRequest;
         _connectionData = [NSMutableData new];
     }
     return self;
@@ -52,8 +56,16 @@
     [_connectionData appendData:data];
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    
+- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    NSLog(@"Invalid username or password");
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    if ([challenge previousFailureCount] == 0) {
+        [[challenge sender] useCredential:_urlCredential forAuthenticationChallenge:challenge];
+    } else {
+        [[challenge sender] cancelAuthenticationChallenge:challenge];
+    }
 }
 
 - (NSData *)connectionData {

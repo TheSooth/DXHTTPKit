@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "DXHTTPConnectionThread.h"
+#import "DXHTTPConnectionDescriptor.h"
+#import "DXHTTPKitErrors.h"
 
 @interface DXHTTPConnectionOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
-- (id)initWithURLRequest:(NSURLRequest *)aURLRequest;
+- (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor;
 
 @property (nonatomic, readonly) NSData *connectionData;
 @property (nonatomic, strong, readonly) NSURLConnection *urlConnection;
