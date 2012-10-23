@@ -11,19 +11,17 @@
 
 @implementation DXHTTPParamKey
 
-+ (NSArray *)allowedClassesForParamValueField {
-    static NSArray *allowedClasses = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        allowedClasses = @[[NSString class], [DXHTTPFormFileDescriptor class]];
-    });
-    return allowedClasses;
-}
 
-+ (BOOL)isAllowedClassForParamValueField:(Class)valueFieldClass {
-    NSArray *allowedClasses = [self allowedClassesForParamValueField];
++ (BOOL)checkAllowedClasses:(Class)aValueFieldClass isParamValueField:(BOOL)isParamValueField  {
+    NSArray *allowedClasses;
+    if (isParamValueField) {
+        allowedClasses = [self allowedClassesForParamValueField];
+    } else {
+        allowedClasses = [self allowedClassesForHeaderValueField];
+    }
+    
     for(int i = 0; i < [allowedClasses count]; ++i) {
-        if([[valueFieldClass class] isSubclassOfClass:[allowedClasses[i] class]]) {
+        if([[aValueFieldClass class] isSubclassOfClass:[allowedClasses[i] class]]) {
             return YES;
         }
     }
@@ -39,13 +37,21 @@
     return allowedClasses;
 }
 
++ (NSArray *)allowedClassesForParamValueField {
+    static NSArray *allowedClasses = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        allowedClasses = @[[NSString class], [DXHTTPFormFileDescriptor class]];
+    });
+    return allowedClasses;
+}
+
++ (BOOL)isAllowedClassForParamValueField:(Class)valueFieldClass {
+    return [self checkAllowedClasses:valueFieldClass isParamValueField:YES];
+}
+
+
 + (BOOL)isAllowedClassForHeaderValueField:(Class)valueFieldClass {
-    NSArray *allowedClasses = [self allowedClassesForHeaderValueField];
-    for(int i = 0; i < [allowedClasses count]; ++i) {
-        if([[valueFieldClass class] isSubclassOfClass:[allowedClasses[i] class]]) {
-            return YES;
-        }
-    }
-    return NO;
+    return [self checkAllowedClasses:valueFieldClass isParamValueField:NO];
 }
 @end

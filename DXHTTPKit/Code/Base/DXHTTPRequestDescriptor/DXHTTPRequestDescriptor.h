@@ -22,7 +22,7 @@ extern const struct DXHTTPMethod
     BOOL (*isValid)(NSString *method);
 } DXHTTPMethod;
 
-@interface DXHTTPRequestDescriptor : DXHTTPParamKey
+@interface DXHTTPRequestDescriptor : NSObject
 
 @property (nonatomic, strong) NSDictionary *headers;
 @property (nonatomic, strong, readonly) NSArray *params;
