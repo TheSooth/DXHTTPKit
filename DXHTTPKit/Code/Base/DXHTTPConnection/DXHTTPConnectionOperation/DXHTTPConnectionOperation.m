@@ -18,6 +18,8 @@
     BOOL _finished;
 }
 
+@property (nonatomic, strong, readwrite)NSURLResponse *urlResponse;
+
 @end
 
 @implementation DXHTTPConnectionOperation
@@ -49,15 +51,16 @@
 
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    _urlResponse = response;
     [_connectionData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.delegate connectionOperation:self willReturnedData:nil urlResponse:_urlResponse];
     [_connectionData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"Invalid username or password");
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
@@ -66,6 +69,10 @@
     } else {
         [[challenge sender] cancelAuthenticationChallenge:challenge];
     }
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    
 }
 
 - (NSData *)connectionData {

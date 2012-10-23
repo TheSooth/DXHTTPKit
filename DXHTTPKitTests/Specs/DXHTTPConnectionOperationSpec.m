@@ -1,9 +1,9 @@
 #import "Kiwi.h"
 #import "DXHTTPConnectionOperation.h"
 
-SPEC_BEGIN(DXHTTPConnectionSpec)
+SPEC_BEGIN(DXHTTPConnectionOperationSpec)
 
-describe(@"DXHTTPConnection", ^{
+describe(@"DXHTTPConnectionOperationSpec", ^{
     
     __block DXHTTPConnectionOperation *connectionOperation;
     __block NSURLRequest *urlRequest;
