@@ -56,7 +56,6 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [self.delegate connectionOperation:self willReturnedData:nil urlResponse:_urlResponse];
     [_connectionData appendData:data];
 }
 
@@ -72,7 +71,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    
+    [self.delegate connectionOperation:self didFInishRequestWithData:_connectionData urlResponse:_urlResponse];
 }
 
 - (NSData *)connectionData {

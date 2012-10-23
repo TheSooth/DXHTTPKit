@@ -15,15 +15,11 @@
 
 @implementation DXHTTPConnection
 
-- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation willReturnedData:(NSData *)aReturnedData urlResponse:(NSURLResponse *)aURLResponse {
+- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation didFInishRequestWithData:(NSData *)aReturnedData urlResponse:(NSURLResponse *)aURLResponse {
     self.receivedData = [aReturnedData copy];
 }
 
 - (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation willReceivedError:(NSError *)aError urlResponse:(NSURLResponse *)aURLResponse {
-    
-}
-
-- (void)connectionOperationDidFinished:(DXHTTPConnectionOperation *)connectionOperation {
     
 }
 
