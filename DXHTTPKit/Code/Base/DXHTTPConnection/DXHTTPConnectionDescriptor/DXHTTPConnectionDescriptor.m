@@ -10,6 +10,7 @@
 @interface DXHTTPConnectionDescriptor() {
     NSURLCredential *_urlCredential;
 }
+@property (nonatomic, strong, readwrite) NSURLCredential *urlCredential;
 @end
 
 @implementation DXHTTPConnectionDescriptor
@@ -18,8 +19,5 @@
     _urlCredential = [[NSURLCredential alloc] initWithUser:aUserName password:aPassword persistence:NSURLCredentialPersistenceForSession];
 }
 
-- (NSURLCredential *)urlCredential {
-    return _urlCredential;
-}
 
 @end

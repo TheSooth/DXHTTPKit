@@ -11,8 +11,10 @@
 @interface DXHTTPFormPartElement() {
     NSData *_partHeader;
     NSInputStream *_partBody;
-    NSUInteger _partBodyLength, _partHeaderLength, _partLenght, _delivered;
+    NSUInteger _partBodyLength, _partHeaderLength, _delivered;
 }
+
+@property (nonatomic, readwrite) NSUInteger partLenght;
 @end
 
 @implementation DXHTTPFormPartElement
@@ -91,9 +93,6 @@
     [_partBody open];
 }
 
-- (NSUInteger)partLenght {
-    return _partLenght;
-}
 
 - (NSString *) mimeTypeForFileAtPath: (NSString *) path {
     CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)[path pathExtension], NULL);

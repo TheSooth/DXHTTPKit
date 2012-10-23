@@ -11,10 +11,12 @@
 @interface DXHTTPFormBodyStreamBuilder() {
     NSMutableArray *_parts;
     NSData         *_footer;
-    NSUInteger     _footerLength, _currentPart, _length, _delivered, _status;
-    NSString *_boundary;
+    NSUInteger     _footerLength, _currentPart, _delivered, _status;
     NSArray *_filesArray, *_paramsArray;
 }
+
+@property (nonatomic, strong, readwrite) NSString *boundary;
+@property (nonatomic, readwrite) NSUInteger length;
 
 @end
 
@@ -99,14 +101,6 @@
     {
         _length += [fe partLenght];
     }
-}
-
-- (NSUInteger)length {
-    return _length;
-}
-
-- (NSString *)boundary {
-    return _boundary;
 }
 
 - (void)_scheduleInCFRunLoop:(NSRunLoop *)runLoop forMode:(id)mode {}
