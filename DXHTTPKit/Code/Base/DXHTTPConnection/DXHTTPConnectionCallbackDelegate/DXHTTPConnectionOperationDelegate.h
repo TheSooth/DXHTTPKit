@@ -13,7 +13,7 @@
 
 @protocol DXHTTPConnectionOperationDelegate <NSObject>
 
-- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation didFInishRequestWithData:(NSData *)returnedData urlResponse:(NSURLResponse *)aURLResponse;
+- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation didFinishRequestWithData:(NSData *)returnedData urlResponse:(NSURLResponse *)aURLResponse;
 
 - (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation willReceivedError:(NSError *)aError urlResponse:(NSURLResponse *)aURLResponse;
 
