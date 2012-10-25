@@ -12,7 +12,10 @@
 
 @interface DXObjectMapper : NSObject
 
-@property(nonatomic, readonly) Class classReference;
+@property(nonatomic, readonly) Class classToGenerate;
 
+- (id)initWithClassToGenerate:(Class)aClassToGenerate;
 - (void)setValuesOnObject:(id)aObject withDictionary:(NSDictionary *)aDictionary;
+- (NSArray *)parseArray:(NSArray *)aArray;
+- (id) parseDictionary:(NSDictionary *)aDictionary;
 @end
