@@ -28,5 +28,5 @@ typedef void (^DXHTTPConnectionOperationProgressBlock)(NSUInteger bytes, long lo
 
 - (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor;
 
-- (void)setDownloadProgressBlock:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))block;
+
 @end

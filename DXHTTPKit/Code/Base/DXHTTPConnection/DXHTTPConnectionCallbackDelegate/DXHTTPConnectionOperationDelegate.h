@@ -17,4 +17,6 @@
 
 - (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation willReceivedError:(NSError *)aError urlResponse:(NSURLResponse *)aURLResponse;
 
+- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation downloadedBytes:(NSUInteger)aDownloadBytes totalBytes:(long long)aTotalBytes;
+
 @end

@@ -17,7 +17,7 @@
     BOOL _finished;
 }
 
-@property (nonatomic, strong, readwrite)NSURLResponse *urlResponse;
+@property (nonatomic, strong, readwrite) NSURLResponse *urlResponse;
 @property (nonatomic, strong, readwrite) DXHTTPConnectionOperationProgressBlock downloadProgress;
 @property (nonatomic, strong, readwrite) NSData *receivedData;
 @property (nonatomic, assign, readwrite) long long totalBytesRead;
@@ -48,19 +48,13 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    self.totalBytesRead += [data length];
-    
+    _totalBytesRead += [data length];
     if ([_connectionOutputStream hasSpaceAvailable]) {
         const uint8_t *receivedDataBuffer = (uint8_t *) [data bytes];
         
         [_connectionOutputStream write:receivedDataBuffer maxLength:[data length]];
     }
     
-    if (_downloadProgress) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _downloadProgress([data length], _totalBytesRead, _urlResponse.expectedContentLength);
-        });
-    }
 }
 
 - (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
@@ -79,10 +73,8 @@
     [_connectionOutputStream close];
     
     [self.delegate connectionOperation:self didFinishRequestWithData:self.receivedData urlResponse:_urlResponse];
-}
+    [self.delegate connectionOperation:self downloadedBytes:[_receivedData length] totalBytes:_urlResponse.expectedContentLength];
 
-- (NSURLConnection *)urlConnection {
-    return _urlConnection;
 }
 
 #pragma mark - NSOperation delegate methods
