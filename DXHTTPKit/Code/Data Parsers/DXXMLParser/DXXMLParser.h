@@ -1,5 +1,5 @@
 //
-//  DXDataTestClass.h
+//  DXXMLParser.h
 //  DXHTTPKit
 //
 //  Created by TheSooth on 10/25/12.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DXDataTestClass : NSObject
+@interface DXXMLParser : NSObject <NSXMLParserDelegate>
 
-@property (nonatomic, strong) NSData *data;
++ (NSDictionary *)dictionaryForXMLData:(NSData *)data;
 @end
