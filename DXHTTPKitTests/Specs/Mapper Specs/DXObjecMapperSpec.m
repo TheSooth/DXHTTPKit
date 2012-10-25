@@ -36,7 +36,7 @@ describe(@"DXObjectMapper", ^{
         [[testClass.userPostText should] equal:@"Some posting text2"];
     });
     
-    it(@"Should parse dictionary with dictionary and assing values to class", ^{
+    it(@"Should parse json file and map data to classes", ^{
         NSString *jsonFilePath = [[NSBundle bundleForClass: [self class]] pathForResource:@"user" ofType:@"json"];
         NSData *data = [NSData dataWithContentsOfFile:jsonFilePath];
         
