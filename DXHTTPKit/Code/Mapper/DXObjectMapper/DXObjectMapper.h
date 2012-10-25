@@ -14,5 +14,5 @@
 
 @property(nonatomic, readonly) Class classReference;
 
-- (void) setValuesOnObject: (id) object withDictionary: (NSDictionary *) dictionary;
+- (void)setValuesOnObject:(id)aObject withDictionary:(NSDictionary *)aDictionary;
 @end

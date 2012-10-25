@@ -10,5 +10,5 @@
 
 @interface DXAttributeSetter : NSObject
 
-+ (void)assingValue:(id)value forAttributeName: (NSString *)attributeName andAttributeClass: (Class) attributeClass onObject:(id)object;
++ (void)assingValue:(id)value forAttributeName:(NSString *)aAttributeName andAttributeClass:(Class)aAttributeClass onObject:(id)aObject;
 @end

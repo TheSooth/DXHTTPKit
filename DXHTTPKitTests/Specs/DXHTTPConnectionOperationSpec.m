@@ -1,6 +1,7 @@
 #import "Kiwi.h"
 #import "DXHTTPConnectionOperation.h"
 #import "DXHTTPRequestBuilder.h"
+#import "DXHTTPConnection.h"
 
 SPEC_BEGIN(DXHTTPConnectionOperationSpec)
 
@@ -42,6 +43,7 @@ describe(@"DXHTTPConnectionOperationSpec", ^{
         it(@"DXConnectionOperation shoul be concurrent", ^{
             [[theValue([connectionOperation isConcurrent]) should] beTrue];
         });
+        
     });
     
     context(@"invalid values", ^{

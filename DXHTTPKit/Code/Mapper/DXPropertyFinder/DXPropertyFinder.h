@@ -11,5 +11,5 @@
 
 @interface DXPropertyFinder : NSObject
 
-+ (NSString *) findPropertyDetailsForKey: (NSString *)key onClass: (Class)class;
++ (NSString *)findPropertyDetailsForKey:(NSString *)aKey onClass:(Class)aClass;
 @end

@@ -10,4 +10,7 @@
 
 @interface DXMapperTestClass : NSObject
 
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *userPostText;
+
 @end

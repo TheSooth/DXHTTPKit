@@ -10,8 +10,8 @@
 
 @implementation DXPropertyFinder
 
-+ (NSString *) findPropertyDetailsForKey: (NSString *)key onClass: (Class)class {
-    objc_property_t property = class_getProperty(class , [key UTF8String]);
++ (NSString *)findPropertyDetailsForKey:(NSString *)aKey onClass:(Class)aClass {
+    objc_property_t property = class_getProperty(aClass , [aKey UTF8String]);
     if (property) {
         NSString *attributeDetails = [NSString stringWithUTF8String:property_getAttributes(property)];
         return attributeDetails;

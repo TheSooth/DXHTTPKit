@@ -10,15 +10,15 @@
 
 @implementation DXAttributeSetter
 
-+ (void)assingValue:(id)value forAttributeName: (NSString *)attributeName andAttributeClass: (Class) attributeClass onObject:(id)object {
-    if([object validateValue:&value forKey:attributeName error:nil]){
++ (void)assingValue:(id)value forAttributeName:(NSString *)aAttributeName andAttributeClass:(Class)aAttributeClass onObject:(id)aObject {
+    if([aObject validateValue:&value forKey:aAttributeName error:nil]){
         if([value isKindOfClass:[NSNull class]]){
             value = nil;
         }
-        if(([value isKindOfClass:[NSNull class]] || value == nil) && attributeClass == [NSString class]){
-            [object setValue:nil forKey:attributeName];
+        if(([value isKindOfClass:[NSNull class]] || value == nil) && aAttributeClass == [NSString class]){
+            [aObject setValue:nil forKey:aAttributeName];
         }else {
-            [object setValue:value forKey:attributeName];
+            [aObject setValue:value forKey:aAttributeName];
         }
     }
 }

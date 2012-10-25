@@ -15,20 +15,20 @@
 
 @implementation DXObjectMapper
 
-- (void) setValuesOnObject: (id) object withDictionary: (NSDictionary *) dictionary {
-    NSArray *keys = [dictionary allKeys];
+- (void)setValuesOnObject:(id)aObject withDictionary:(NSDictionary *)aDictionary{
+    NSArray *keys = [aDictionary allKeys];
     for (NSString *key in keys) {
-        id value = [dictionary valueForKey:key];
-        NSString *aviableValue = [DXPropertyFinder findPropertyDetailsForKey:key onClass:[object class]];
+        id value = [aDictionary valueForKey:key];
+        NSString *aviableValue = [DXPropertyFinder findPropertyDetailsForKey:key onClass:[aObject class]];
         if (aviableValue){
-            [self parseValue:value forObject:object forAttribute:key];
+            [self parseValue:value forObject:aObject forAttribute:key];
         }
     }
 }
 
-- (void) parseValue: (id) value forObject: (id) object forAttribute:(NSString *)attributeName {
+- (void) parseValue:(id)aValue forObject:(id)aObject forAttribute:(NSString *)aAttributeName {
     
-    [DXAttributeSetter assingValue:value forAttributeName:attributeName andAttributeClass:[NSString class] onObject:object];
+    [DXAttributeSetter assingValue:aValue forAttributeName:aAttributeName andAttributeClass:[NSString class] onObject:aObject];
 }
 
 @end
