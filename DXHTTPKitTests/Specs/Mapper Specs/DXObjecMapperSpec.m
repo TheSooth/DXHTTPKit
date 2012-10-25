@@ -2,6 +2,7 @@
 #import "DXMapperTestClass.h"
 #import "DXObjectMapper.h"
 #import "DXPhoneNumberTestClass.h"
+#import "DXDataTestClass.h"
 
 SPEC_BEGIN(DXObjectMapperSpec)
 
@@ -59,6 +60,15 @@ describe(@"DXObjectMapper", ^{
         [[phoneNumberTestClass.type should] equal:@"fax"];
     });
     
+    it(@"Should assing NSData to data var of class", ^{
+        NSData *fileData = [NSData dataWithContentsOfFile:@"/etc/hosts"];
+        NSDictionary *dict = @{@"data" : fileData};
+        
+        DXDataTestClass *dataTestClass = [DXDataTestClass new];
+        [objectMapper setValuesOnObject:dataTestClass withDictionary:dict];
+        
+        [[dataTestClass.data should] equal:fileData];
+    });
 });
     
 SPEC_END

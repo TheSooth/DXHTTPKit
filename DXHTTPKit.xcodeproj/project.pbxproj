@@ -40,6 +40,7 @@
 		EA84652616398950007BBDFA /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = EA84652516398950007BBDFA /* user.json */; };
 		EA84652916398B25007BBDFA /* DXPhoneNumberTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84652816398B25007BBDFA /* DXPhoneNumberTestClass.m */; };
 		EA84652C16399662007BBDFA /* DXMapperTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84652B16399662007BBDFA /* DXMapperTestClass.m */; };
+		EA84652F16399827007BBDFA /* DXDataTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84652E16399827007BBDFA /* DXDataTestClass.m */; };
 		EAB5F43C162D869900A7E403 /* DXHTTPRequestDescriptorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F438162D869900A7E403 /* DXHTTPRequestDescriptorSpec.m */; };
 		EAB5F43D162D869900A7E403 /* DXHTTPFormParamSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F439162D869900A7E403 /* DXHTTPFormParamSpec.m */; };
 		EAB5F43E162D869900A7E403 /* DXHTTPHeadersStorageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5F43A162D869900A7E403 /* DXHTTPHeadersStorageSpec.m */; };
@@ -128,6 +129,8 @@
 		EA84652816398B25007BBDFA /* DXPhoneNumberTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXPhoneNumberTestClass.m; path = "Mapper Specs/TestClasses/DXPhoneNumberTestClass.m"; sourceTree = "<group>"; };
 		EA84652A16399662007BBDFA /* DXMapperTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXMapperTestClass.h; path = "Mapper Specs/TestClasses/DXMapperTestClass.h"; sourceTree = "<group>"; };
 		EA84652B16399662007BBDFA /* DXMapperTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXMapperTestClass.m; path = "Mapper Specs/TestClasses/DXMapperTestClass.m"; sourceTree = "<group>"; };
+		EA84652D16399827007BBDFA /* DXDataTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXDataTestClass.h; sourceTree = "<group>"; };
+		EA84652E16399827007BBDFA /* DXDataTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXDataTestClass.m; sourceTree = "<group>"; };
 		EAB5F438162D869900A7E403 /* DXHTTPRequestDescriptorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPRequestDescriptorSpec.m; sourceTree = "<group>"; };
 		EAB5F439162D869900A7E403 /* DXHTTPFormParamSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParamSpec.m; sourceTree = "<group>"; };
 		EAB5F43A162D869900A7E403 /* DXHTTPHeadersStorageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPHeadersStorageSpec.m; sourceTree = "<group>"; };
@@ -471,6 +474,8 @@
 				EA84652B16399662007BBDFA /* DXMapperTestClass.m */,
 				EA84652716398B25007BBDFA /* DXPhoneNumberTestClass.h */,
 				EA84652816398B25007BBDFA /* DXPhoneNumberTestClass.m */,
+				EA84652D16399827007BBDFA /* DXDataTestClass.h */,
+				EA84652E16399827007BBDFA /* DXDataTestClass.m */,
 			);
 			name = "DXMapper Test Classes";
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 				EA8464FD1639663A007BBDFA /* DXObjecMapperSpec.m in Sources */,
 				EA84652916398B25007BBDFA /* DXPhoneNumberTestClass.m in Sources */,
 				EA84652C16399662007BBDFA /* DXMapperTestClass.m in Sources */,
+				EA84652F16399827007BBDFA /* DXDataTestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

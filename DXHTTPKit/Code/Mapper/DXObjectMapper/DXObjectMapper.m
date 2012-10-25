@@ -62,7 +62,7 @@
 
 - (void)parseValue:(id)aValue forObject:(id)aObject forAttribute:(NSString *)aAttributeName {
     
-    [DXAttributeSetter assingValue:aValue forAttributeName:aAttributeName andAttributeClass:[NSString class] onObject:aObject];
+    [DXAttributeSetter assingValue:aValue forAttributeName:aAttributeName andAttributeClass:[aValue class] onObject:aObject];
 }
 
 @end
