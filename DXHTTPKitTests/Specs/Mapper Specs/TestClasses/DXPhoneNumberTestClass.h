@@ -10,4 +10,7 @@
 
 @interface DXPhoneNumberTestClass : NSObject
 
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *number;
+
 @end
