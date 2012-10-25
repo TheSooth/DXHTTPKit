@@ -26,6 +26,7 @@
 		EA3B7DD31635E25B0091D7A5 /* DXHTTPKitErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3B7DD21635E25B0091D7A5 /* DXHTTPKitErrors.m */; };
 		EA3EB4F31631963500547FED /* DXHTTPFormParamsBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB4F21631963500547FED /* DXHTTPFormParamsBuilderSpec.m */; };
 		EA3EB519163211FD00547FED /* DXHTTPFormParamsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB518163211FD00547FED /* DXHTTPFormParamsBuilder.m */; };
+		EA43498D1638EB5300BE15E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA43498C1638EB5300BE15E2 /* UIKit.framework */; };
 		EA62E4871635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */; };
 		EA62E48B1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */; };
 		EA76B4E516309D2E004B85CA /* DXHTTPRequestBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4E416309D2E004B85CA /* DXHTTPRequestBuilderSpec.m */; };
@@ -98,6 +99,7 @@
 		EA3EB4F21631963500547FED /* DXHTTPFormParamsBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParamsBuilderSpec.m; sourceTree = "<group>"; };
 		EA3EB517163211FD00547FED /* DXHTTPFormParamsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPFormParamsBuilder.h; sourceTree = "<group>"; };
 		EA3EB518163211FD00547FED /* DXHTTPFormParamsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPFormParamsBuilder.m; sourceTree = "<group>"; };
+		EA43498C1638EB5300BE15E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA62E4851635DAD8008A9BFE /* DXHTTPConnectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPConnectionDescriptor.h; path = DXHTTPConnectionDescriptor/DXHTTPConnectionDescriptor.h; sourceTree = "<group>"; };
 		EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPConnectionDescriptor.m; path = DXHTTPConnectionDescriptor/DXHTTPConnectionDescriptor.m; sourceTree = "<group>"; };
 		EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnectionDescriptorSpec.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA43498D1638EB5300BE15E2 /* UIKit.framework in Frameworks */,
 				EA28F37D1634590B00D5D00A /* MobileCoreServices.framework in Frameworks */,
 				ADFB0AD1162C99AB00AC5954 /* SenTestingKit.framework in Frameworks */,
 				ADFB0AD4162C99AB00AC5954 /* Foundation.framework in Frameworks */,
@@ -222,6 +225,7 @@
 		ADFB0AB3162C99AB00AC5954 = {
 			isa = PBXGroup;
 			children = (
+				EA43498C1638EB5300BE15E2 /* UIKit.framework */,
 				ADFB0AC3162C99AB00AC5954 /* DXHTTPKit */,
 				ADFB0AD8162C99AB00AC5954 /* DXHTTPKitTests */,
 				ADFB0AC0162C99AB00AC5954 /* Frameworks */,

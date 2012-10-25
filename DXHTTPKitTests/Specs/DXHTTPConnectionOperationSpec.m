@@ -1,5 +1,6 @@
 #import "Kiwi.h"
 #import "DXHTTPConnectionOperation.h"
+#import "DXHTTPRequestBuilder.h"
 
 SPEC_BEGIN(DXHTTPConnectionOperationSpec)
 
@@ -25,14 +26,17 @@ describe(@"DXHTTPConnectionOperationSpec", ^{
         
         it(@"Should set connectionData in DXHTTPConnectionOperation", ^{
             NSData *dataForTesting = [[NSString stringWithFormat:@"Data for Testing"] dataUsingEncoding:NSUTF8StringEncoding];
+            [connectionOperation connection:[connectionOperation urlConnection] didReceiveResponse:nil];
+
             [connectionOperation connection:[connectionOperation urlConnection] didReceiveData:dataForTesting];
+            [connectionOperation connectionDidFinishLoading:[connectionOperation urlConnection]];
             
-            [[[connectionOperation connectionData] should] equal:dataForTesting];
+            [[[connectionOperation receivedData] should] equal:dataForTesting];
         });
         
         it(@"Data in connectionOperation should be zero in time of resiveResponce", ^{
             [connectionOperation connection:[connectionOperation urlConnection] didReceiveResponse:nil];
-            [[theValue([[connectionOperation connectionData] length]) should] equal:theValue(0)];
+            [[theValue([[connectionOperation receivedData] length]) should] equal:theValue(0)];
         });
         
         it(@"DXConnectionOperation shoul be concurrent", ^{

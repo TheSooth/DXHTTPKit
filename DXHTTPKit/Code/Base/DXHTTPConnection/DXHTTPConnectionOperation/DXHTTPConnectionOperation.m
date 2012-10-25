@@ -11,7 +11,6 @@
 @interface DXHTTPConnectionOperation() {
     NSURLRequest *_urlRequest;
     NSURLConnection *_urlConnection;
-    NSMutableData *_connectionData;
     NSMutableDictionary *_connectionResponseHeaders;
     NSURLCredential *_urlCredential;
     BOOL _executing;
@@ -19,6 +18,10 @@
 }
 
 @property (nonatomic, strong, readwrite)NSURLResponse *urlResponse;
+@property (nonatomic, strong, readwrite) DXHTTPConnectionOperationProgressBlock downloadProgress;
+@property (nonatomic, strong, readwrite) NSData *receivedData;
+@property (nonatomic, assign, readwrite) long long totalBytesRead;
+@property (nonatomic, strong, readwrite) NSOutputStream *connectionOutputStream;
 
 @end
 
@@ -31,32 +34,33 @@
     if (self) {
         _urlCredential = aConnectionDescriptor.urlCredential;
         _urlRequest = aConnectionDescriptor.urlRequest;
-        _connectionData = [NSMutableData new];
+        _connectionOutputStream = [NSOutputStream outputStreamToMemory];
     }
     return self;
 }
 
-- (void)start {
-    _executing = YES;
-    [self performSelector:@selector(connectionOpeartionDidStart) onThread:[DXHTTPConnectionThread requestConnectionThread] withObject:nil waitUntilDone:NO];
-    
-}
-
-- (void)connectionOpeartionDidStart {
-    _urlConnection = [[NSURLConnection alloc] initWithRequest:_urlRequest delegate:self];
-    NSRunLoop *connectionRunLoop = [NSRunLoop currentRunLoop];
-    [_urlConnection scheduleInRunLoop:connectionRunLoop forMode:NSRunLoopCommonModes];
-    [_urlConnection start];
-}
-
+#pragma mark - NSURLConnection delegate methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     _urlResponse = response;
-    [_connectionData setLength:0];
+    
+    [_connectionOutputStream open];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [_connectionData appendData:data];
+    self.totalBytesRead += [data length];
+    
+    if ([_connectionOutputStream hasSpaceAvailable]) {
+        const uint8_t *receivedDataBuffer = (uint8_t *) [data bytes];
+        
+        [_connectionOutputStream write:receivedDataBuffer maxLength:[data length]];
+    }
+    
+    if (_downloadProgress) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _downloadProgress([data length], _totalBytesRead, _urlResponse.expectedContentLength);
+        });
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
@@ -71,16 +75,17 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [self.delegate connectionOperation:self didFinishRequestWithData:_connectionData urlResponse:_urlResponse];
-}
-
-- (NSData *)connectionData {
-    return _connectionData;
+    _receivedData = [_connectionOutputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
+    [_connectionOutputStream close];
+    
+    [self.delegate connectionOperation:self didFinishRequestWithData:self.receivedData urlResponse:_urlResponse];
 }
 
 - (NSURLConnection *)urlConnection {
     return _urlConnection;
 }
+
+#pragma mark - NSOperation delegate methods
 
 - (BOOL)isExecuting {
     return _executing;
@@ -92,6 +97,27 @@
 
 - (BOOL)isConcurrent {
     return YES;
+}
+
+#pragma mark - DXHTTPConnectionOperation methods
+
+- (void)start {
+    _executing = YES;
+    [self performSelector:@selector(connectionOpeartionDidStart) onThread:[DXHTTPConnectionThread requestConnectionThread] withObject:nil waitUntilDone:NO];
+    
+}
+
+- (void)connectionOpeartionDidStart {
+    _urlConnection = [[NSURLConnection alloc] initWithRequest:_urlRequest delegate:self];
+    NSRunLoop *connectionRunLoop = [NSRunLoop currentRunLoop];
+    [_urlConnection scheduleInRunLoop:connectionRunLoop forMode:NSRunLoopCommonModes];
+    [_connectionOutputStream scheduleInRunLoop:connectionRunLoop forMode:NSRunLoopCommonModes];
+    
+    [_urlConnection start];
+}
+
+- (void)setDownloadProgressBlock:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))block {
+    _downloadProgress = block;
 }
 
 @end

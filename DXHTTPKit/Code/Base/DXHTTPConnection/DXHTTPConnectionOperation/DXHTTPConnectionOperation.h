@@ -12,19 +12,21 @@
 #import "DXHTTPKitErrors.h"
 #import "DXHTTPConnectionOperationDelegate.h"
 
+typedef void (^DXHTTPConnectionOperationProgressBlock)(NSUInteger bytes, long long totalBytes, long long totalBytesExpected);
+
 @protocol DXHTTPConnectionOperationDelegate;
 
 @interface DXHTTPConnectionOperation : NSOperation <NSURLConnectionDelegate, NSURLConnectionDataDelegate> {
     id <DXHTTPConnectionOperationDelegate> _delegate;
 }
 
-- (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor;
-
-@property (nonatomic, readonly) NSData *connectionData; 
-
 @property (nonatomic, strong, readonly) NSURLConnection *urlConnection;
 
 @property (nonatomic, strong) id <DXHTTPConnectionOperationDelegate> delegate;
 
+@property (nonatomic, strong, readonly) NSData *receivedData;
 
+- (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor;
+
+- (void)setDownloadProgressBlock:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))block;
 @end
