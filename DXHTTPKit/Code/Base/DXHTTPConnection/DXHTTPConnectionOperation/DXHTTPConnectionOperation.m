@@ -46,6 +46,8 @@
 {
     _urlResponse = response;
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     [_connectionOutputStream open];
 }
 
@@ -76,6 +78,8 @@
 {
     _receivedData = [_connectionOutputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
     [_connectionOutputStream close];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
     [self.delegate connectionOperation:self didFinishRequestWithData:self.receivedData urlResponse:_urlResponse];
     [self.delegate connectionOperation:self downloadedBytes:[_receivedData length] totalBytes:_urlResponse.expectedContentLength];

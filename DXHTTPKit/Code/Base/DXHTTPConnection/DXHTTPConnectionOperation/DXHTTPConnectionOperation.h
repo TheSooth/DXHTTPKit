@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "DXHTTPConnectionThread.h"
 #import "DXHTTPConnectionDescriptor.h"
 #import "DXHTTPKitErrors.h"
