@@ -27,7 +27,8 @@
 
 @implementation DXHTTPConnectionOperation
 
-- (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor {
+- (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor
+{
     DXParametrAssert(aConnectionDescriptor.urlRequest, DXHTTPKitErrors.EmptyURLRequest);
     
     self = [super init];
@@ -41,26 +42,29 @@
 
 #pragma mark - NSURLConnection delegate methods
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
     _urlResponse = response;
     
     [_connectionOutputStream open];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
     _totalBytesRead += [data length];
     if ([_connectionOutputStream hasSpaceAvailable]) {
         const uint8_t *receivedDataBuffer = (uint8_t *) [data bytes];
         
         [_connectionOutputStream write:receivedDataBuffer maxLength:[data length]];
     }
-    
 }
 
-- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+{
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+{
     if ([challenge previousFailureCount] == 0) {
         [[challenge sender] useCredential:_urlCredential forAuthenticationChallenge:challenge];
     } else {
@@ -68,7 +72,8 @@
     }
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
     _receivedData = [_connectionOutputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
     [_connectionOutputStream close];
     
@@ -79,36 +84,43 @@
 
 #pragma mark - NSOperation delegate methods
 
-- (BOOL)isExecuting {
+- (BOOL)isExecuting
+{
     return _executing;
 }
 
-- (BOOL)isFinished {
+- (BOOL)isFinished
+{
     return _finished;
 }
 
-- (BOOL)isConcurrent {
+- (BOOL)isConcurrent
+{
     return YES;
 }
 
 #pragma mark - DXHTTPConnectionOperation methods
 
-- (void)start {
+- (void)start
+{
     _executing = YES;
     [self performSelector:@selector(connectionOpeartionDidStart) onThread:[DXHTTPConnectionThread requestConnectionThread] withObject:nil waitUntilDone:NO];
     
 }
 
-- (void)connectionOpeartionDidStart {
+- (void)connectionOpeartionDidStart
+{
     _urlConnection = [[NSURLConnection alloc] initWithRequest:_urlRequest delegate:self];
     NSRunLoop *connectionRunLoop = [NSRunLoop currentRunLoop];
+    
     [_urlConnection scheduleInRunLoop:connectionRunLoop forMode:NSRunLoopCommonModes];
     [_connectionOutputStream scheduleInRunLoop:connectionRunLoop forMode:NSRunLoopCommonModes];
     
     [_urlConnection start];
 }
 
-- (void)setDownloadProgressBlock:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))block {
+- (void)setDownloadProgressBlock:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))block
+{
     _downloadProgress = block;
 }
 

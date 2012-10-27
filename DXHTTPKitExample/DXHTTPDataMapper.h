@@ -12,5 +12,7 @@
 
 @property (nonatomic, strong) NSArray *tweetsArray;
 
+@property (nonatomic, strong) NSArray *tweetUserArray;
+
 -(void)mappingObjectsFromData:(NSData *)aData;
 @end

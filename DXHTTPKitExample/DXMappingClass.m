@@ -8,6 +8,7 @@
 
 #import "DXMappingClass.h"
 #import "DXTweets.h"
+#import "DXTweetUser.h"
 
 @implementation DXMappingClass
 
@@ -18,6 +19,13 @@
         [mapping mapKeyPath:@"source" toAttribute:@"source"];
         
         [self registerMapping:mapping];
+    }];
+    
+    [self mappingForObject:[DXTweetUser class] block:^(BWObjectMapping *mapping) {
+        [mapping mapKeyPath:@"name" toAttribute:@"name"];
+        [mapping mapKeyPath:@"screen_name" toAttribute:@"screenName"];
+        
+        [self registerMapping:mapping withRootKeyPath:@"user"];
     }];
     
     [self objectWithBlock:^id(Class objectClass, NSString *primaryKey, id primaryKeyValue, id JSON) {

@@ -22,9 +22,9 @@ typedef void (^DXHTTPConnectionOperationProgressBlock)(NSUInteger bytes, long lo
 
 @property (nonatomic, strong, readonly) NSURLConnection *urlConnection;
 
-@property (nonatomic, strong) id <DXHTTPConnectionOperationDelegate> delegate;
-
 @property (nonatomic, strong, readonly) NSData *receivedData;
+
+@property (nonatomic, strong) id <DXHTTPConnectionOperationDelegate> delegate;
 
 - (id)initWithConnectionDescriptor:(DXHTTPConnectionDescriptor *)aConnectionDescriptor;
 
