@@ -1,5 +1,4 @@
 #import "Kiwi.h"
-#import "DXObjectMapper.h"
 #import "DXHTTPConnectionOperation.h"
 
 SPEC_BEGIN(DXHTTPConnectionDescriptorSpec)
