@@ -1,11 +1,7 @@
 #import "Kiwi.h"
-#import <BWObjectMapping/BWObjectMapper.h>
-#import "DXPhoneNumberTestClass.h"
 #import "DXJSONParser.h"
 #import "DXObjectMapping.h"
-#import "DXObjectMapperTestClass.h"
-
-
+#import "DXPhoneNumberTestClass.h"
 
 SPEC_BEGIN(DXObjectMapperSpec)
 

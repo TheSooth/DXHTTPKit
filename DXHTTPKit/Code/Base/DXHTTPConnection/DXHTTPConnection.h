@@ -10,10 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "DXHTTPConnectionOperationDelegate.h"
 
-@interface DXHTTPConnection : NSObject <DXHTTPConnectionOperationDelegate>
-
-@property (nonatomic, strong, readonly) NSData *receivedData;
-
+@interface DXHTTPConnection : NSObject
 + (void)showNetworkActivityIndicator;
 
 + (void)hideNetworkActivityIndicator;

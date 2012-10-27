@@ -1,5 +1,5 @@
 platform :ios, "6.0"
-pod 'BWObjectMapping'
+pod 'DXObjectMapping'
 pod "MAObjCRuntime"
 pod "BWObjectSerializer"
 target :DXHTTPKitTests, :exclusive => true do

@@ -15,22 +15,13 @@
 
 @implementation DXHTTPConnection
 
-- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation didFinishRequestWithData:(NSData *)aReturnedData urlResponse:(NSURLResponse *)aURLResponse {
-    self.receivedData = [aReturnedData copy];
-}
-
-- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation willReceivedError:(NSError *)aError urlResponse:(NSURLResponse *)aURLResponse {
-}
-
-- (void)connectionOperation:(DXHTTPConnectionOperation *)connectionOperation downloadedBytes:(NSUInteger)aDownloadBytes totalBytes:(long long)aTotalBytes {
-    NSLog(@"Downloaded bytes = %u, Total Bytes = %lld", aDownloadBytes, aTotalBytes);
-}
-
-+ (void)showNetworkActivityIndicator {
++ (void)showNetworkActivityIndicator
+{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
-+ (void)hideNetworkActivityIndicator {
++ (void)hideNetworkActivityIndicator
+{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 

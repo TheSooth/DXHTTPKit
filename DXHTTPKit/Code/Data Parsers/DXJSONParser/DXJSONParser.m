@@ -10,7 +10,7 @@
 
 @implementation DXJSONParser
 
-+ (NSDictionary *)dictionaryForJSONData:(NSData *)aData {
++ (id)dictionaryForJSONData:(NSData *)aData {
     return [NSJSONSerialization JSONObjectWithData:aData options:NSJSONReadingMutableContainers error:nil];
 }
 @end

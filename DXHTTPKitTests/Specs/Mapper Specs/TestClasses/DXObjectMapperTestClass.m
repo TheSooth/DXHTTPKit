@@ -3,9 +3,9 @@
 
 @implementation DXObjectMapperTestClass
 
-
-- (void)setupMapping {
-    [self mappingForObject:[DXPhoneNumberTestClass class] block:^(DXObjectMapping *mapping) {
++ (void)setup
+{
+    [self mappingForObject:[DXPhoneNumberTestClass class] block:^(BWObjectMapping *mapping) {
         [mapping mapKeyPath:@"type" toAttribute:@"type"];
         [mapping mapKeyPath:@"number" toAttribute:@"number"];
         

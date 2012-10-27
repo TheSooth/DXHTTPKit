@@ -9,6 +9,24 @@
 /* Begin PBXBuildFile section */
 		6575E088767143DEB0176DDF /* libPods-DXHTTPKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C3258A7284934903EF15F /* libPods-DXHTTPKitTests.a */; };
 		ADEDB66C163BDC9000CFD839 /* DXPhoneNumberTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB66B163BDC9000CFD839 /* DXPhoneNumberTestClass.m */; };
+		ADEDB687163BF03100CFD839 /* DXConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB680163BF03100CFD839 /* DXConfiguration.m */; };
+		ADEDB688163BF03100CFD839 /* DXObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB683163BF03100CFD839 /* DXObjectMapping.m */; };
+		ADEDB689163BF03100CFD839 /* DXObjectSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB686163BF03100CFD839 /* DXObjectSerializer.m */; };
+		ADEDB694163BF31500CFD839 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEDB693163BF31500CFD839 /* UIKit.framework */; };
+		ADEDB695163BF31500CFD839 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0AC1162C99AB00AC5954 /* Foundation.framework */; };
+		ADEDB697163BF31500CFD839 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEDB696163BF31500CFD839 /* CoreGraphics.framework */; };
+		ADEDB69D163BF31500CFD839 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADEDB69B163BF31500CFD839 /* InfoPlist.strings */; };
+		ADEDB69F163BF31500CFD839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB69E163BF31500CFD839 /* main.m */; };
+		ADEDB6A3163BF31500CFD839 /* DXHTTPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB6A2163BF31500CFD839 /* DXHTTPAppDelegate.m */; };
+		ADEDB6A5163BF31500CFD839 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEDB6A4163BF31500CFD839 /* Default.png */; };
+		ADEDB6A7163BF31500CFD839 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEDB6A6163BF31500CFD839 /* Default@2x.png */; };
+		ADEDB6A9163BF31500CFD839 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEDB6A8163BF31500CFD839 /* Default-568h@2x.png */; };
+		ADEDB6C6163BF66900CFD839 /* DXTweets.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB6C5163BF66900CFD839 /* DXTweets.m */; };
+		ADEDB6C7163BF7F500CFD839 /* libDXHTTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0ABE162C99AB00AC5954 /* libDXHTTPKit.a */; };
+		ADEDB6C8163BF82E00CFD839 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA28F37C1634590B00D5D00A /* MobileCoreServices.framework */; };
+		ADEDB6CB163BF9E100CFD839 /* DXHTTPConnectionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB6CA163BF9E100CFD839 /* DXHTTPConnectionSource.m */; };
+		ADEDB6CE163BFAFE00CFD839 /* DXHTTPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB6CD163BFAFE00CFD839 /* DXHTTPDataMapper.m */; };
+		ADEDB6D1163BFBDC00CFD839 /* DXMappingClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEDB6D0163BFBDC00CFD839 /* DXMappingClass.m */; };
 		ADFB0AC2162C99AB00AC5954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0AC1162C99AB00AC5954 /* Foundation.framework */; };
 		ADFB0AD1162C99AB00AC5954 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0AD0162C99AB00AC5954 /* SenTestingKit.framework */; };
 		ADFB0AD4162C99AB00AC5954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFB0AC1162C99AB00AC5954 /* Foundation.framework */; };
@@ -32,7 +50,6 @@
 		EA3EB519163211FD00547FED /* DXHTTPFormParamsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3EB518163211FD00547FED /* DXHTTPFormParamsBuilder.m */; };
 		EA62E4871635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */; };
 		EA62E48B1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */; };
-		EA714704163AC10900E2D698 /* DXObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EA714703163AC10900E2D698 /* DXObjectMapping.m */; };
 		EA76B4E516309D2E004B85CA /* DXHTTPRequestBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4E416309D2E004B85CA /* DXHTTPRequestBuilderSpec.m */; };
 		EA76B4F11630A7D2004B85CA /* DXHTTPRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4F01630A7D2004B85CA /* DXHTTPRequestBuilder.m */; };
 		EA76B4F51630A81E004B85CA /* DXHTTPHeadersBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA76B4F41630A81E004B85CA /* DXHTTPHeadersBuilder.m */; };
@@ -83,6 +100,32 @@
 		7B6A58196C7C4D9A8DE45EAD /* Pods-DXHTTPKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DXHTTPKitTests.xcconfig"; path = "Pods/Pods-DXHTTPKitTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		ADEDB66A163BDC9000CFD839 /* DXPhoneNumberTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPhoneNumberTestClass.h; sourceTree = "<group>"; };
 		ADEDB66B163BDC9000CFD839 /* DXPhoneNumberTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPhoneNumberTestClass.m; sourceTree = "<group>"; };
+		ADEDB67F163BF03100CFD839 /* DXConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXConfiguration.h; sourceTree = "<group>"; };
+		ADEDB680163BF03100CFD839 /* DXConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXConfiguration.m; sourceTree = "<group>"; };
+		ADEDB682163BF03100CFD839 /* DXObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXObjectMapping.h; sourceTree = "<group>"; };
+		ADEDB683163BF03100CFD839 /* DXObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXObjectMapping.m; sourceTree = "<group>"; };
+		ADEDB685163BF03100CFD839 /* DXObjectSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXObjectSerializer.h; sourceTree = "<group>"; };
+		ADEDB686163BF03100CFD839 /* DXObjectSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXObjectSerializer.m; sourceTree = "<group>"; };
+		ADEDB691163BF31500CFD839 /* DXHTTPKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DXHTTPKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADEDB693163BF31500CFD839 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ADEDB696163BF31500CFD839 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ADEDB69A163BF31500CFD839 /* DXHTTPKitExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DXHTTPKitExample-Info.plist"; sourceTree = "<group>"; };
+		ADEDB69C163BF31500CFD839 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADEDB69E163BF31500CFD839 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADEDB6A0163BF31500CFD839 /* DXHTTPKitExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXHTTPKitExample-Prefix.pch"; sourceTree = "<group>"; };
+		ADEDB6A1163BF31500CFD839 /* DXHTTPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXHTTPAppDelegate.h; sourceTree = "<group>"; };
+		ADEDB6A2163BF31500CFD839 /* DXHTTPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXHTTPAppDelegate.m; sourceTree = "<group>"; };
+		ADEDB6A4163BF31500CFD839 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		ADEDB6A6163BF31500CFD839 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		ADEDB6A8163BF31500CFD839 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ADEDB6C4163BF66900CFD839 /* DXTweets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXTweets.h; sourceTree = "<group>"; };
+		ADEDB6C5163BF66900CFD839 /* DXTweets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXTweets.m; sourceTree = "<group>"; };
+		ADEDB6C9163BF9E100CFD839 /* DXHTTPConnectionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPConnectionSource.h; sourceTree = "<group>"; };
+		ADEDB6CA163BF9E100CFD839 /* DXHTTPConnectionSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnectionSource.m; sourceTree = "<group>"; };
+		ADEDB6CC163BFAFE00CFD839 /* DXHTTPDataMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXHTTPDataMapper.h; sourceTree = "<group>"; };
+		ADEDB6CD163BFAFE00CFD839 /* DXHTTPDataMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPDataMapper.m; sourceTree = "<group>"; };
+		ADEDB6CF163BFBDC00CFD839 /* DXMappingClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXMappingClass.h; sourceTree = "<group>"; };
+		ADEDB6D0163BFBDC00CFD839 /* DXMappingClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXMappingClass.m; sourceTree = "<group>"; };
 		ADFB0ABE162C99AB00AC5954 /* libDXHTTPKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDXHTTPKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFB0AC1162C99AB00AC5954 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADFB0AC5162C99AB00AC5954 /* DXHTTPKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXHTTPKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -121,8 +164,6 @@
 		EA62E4851635DAD8008A9BFE /* DXHTTPConnectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPConnectionDescriptor.h; path = DXHTTPConnectionDescriptor/DXHTTPConnectionDescriptor.h; sourceTree = "<group>"; };
 		EA62E4861635DAD8008A9BFE /* DXHTTPConnectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPConnectionDescriptor.m; path = DXHTTPConnectionDescriptor/DXHTTPConnectionDescriptor.m; sourceTree = "<group>"; };
 		EA62E48A1635DF2F008A9BFE /* DXHTTPConnectionDescriptorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPConnectionDescriptorSpec.m; sourceTree = "<group>"; };
-		EA714702163AC10900E2D698 /* DXObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXObjectMapping.h; path = ObjectMapping/DXObjectMapping.h; sourceTree = "<group>"; };
-		EA714703163AC10900E2D698 /* DXObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXObjectMapping.m; path = ObjectMapping/DXObjectMapping.m; sourceTree = "<group>"; };
 		EA76B4E416309D2E004B85CA /* DXHTTPRequestBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXHTTPRequestBuilderSpec.m; sourceTree = "<group>"; };
 		EA76B4EF1630A7D2004B85CA /* DXHTTPRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXHTTPRequestBuilder.h; path = Builders/DXHTTPRequestBuilder/DXHTTPRequestBuilder.h; sourceTree = "<group>"; };
 		EA76B4F01630A7D2004B85CA /* DXHTTPRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXHTTPRequestBuilder.m; path = Builders/DXHTTPRequestBuilder/DXHTTPRequestBuilder.m; sourceTree = "<group>"; };
@@ -151,6 +192,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ADEDB68E163BF31500CFD839 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEDB6C8163BF82E00CFD839 /* MobileCoreServices.framework in Frameworks */,
+				ADEDB6C7163BF7F500CFD839 /* libDXHTTPKit.a in Frameworks */,
+				ADEDB694163BF31500CFD839 /* UIKit.framework in Frameworks */,
+				ADEDB695163BF31500CFD839 /* Foundation.framework in Frameworks */,
+				ADEDB697163BF31500CFD839 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADFB0ABB162C99AB00AC5954 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,7 +252,7 @@
 		ADE7EE2D162C9F5B0061F3F8 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				EA714706163AC10C00E2D698 /* ObjectMapping */,
+				ADEDB67E163BF03100CFD839 /* Configuration */,
 				EA84653116399B93007BBDFA /* Data Parsers */,
 				ADE7EE3F162CA7E10061F3F8 /* Base */,
 				EA76B4E616309E22004B85CA /* Builders */,
@@ -256,12 +309,73 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		ADEDB67E163BF03100CFD839 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ADEDB67F163BF03100CFD839 /* DXConfiguration.h */,
+				ADEDB680163BF03100CFD839 /* DXConfiguration.m */,
+				ADEDB681163BF03100CFD839 /* Object Mapping */,
+				ADEDB684163BF03100CFD839 /* Object Serializer */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		ADEDB681163BF03100CFD839 /* Object Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				ADEDB682163BF03100CFD839 /* DXObjectMapping.h */,
+				ADEDB683163BF03100CFD839 /* DXObjectMapping.m */,
+			);
+			path = "Object Mapping";
+			sourceTree = "<group>";
+		};
+		ADEDB684163BF03100CFD839 /* Object Serializer */ = {
+			isa = PBXGroup;
+			children = (
+				ADEDB685163BF03100CFD839 /* DXObjectSerializer.h */,
+				ADEDB686163BF03100CFD839 /* DXObjectSerializer.m */,
+			);
+			path = "Object Serializer";
+			sourceTree = "<group>";
+		};
+		ADEDB698163BF31500CFD839 /* DXHTTPKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				ADEDB6A1163BF31500CFD839 /* DXHTTPAppDelegate.h */,
+				ADEDB6A2163BF31500CFD839 /* DXHTTPAppDelegate.m */,
+				ADEDB6C9163BF9E100CFD839 /* DXHTTPConnectionSource.h */,
+				ADEDB6CA163BF9E100CFD839 /* DXHTTPConnectionSource.m */,
+				ADEDB6CC163BFAFE00CFD839 /* DXHTTPDataMapper.h */,
+				ADEDB6CD163BFAFE00CFD839 /* DXHTTPDataMapper.m */,
+				ADEDB6CF163BFBDC00CFD839 /* DXMappingClass.h */,
+				ADEDB6D0163BFBDC00CFD839 /* DXMappingClass.m */,
+				ADEDB6C4163BF66900CFD839 /* DXTweets.h */,
+				ADEDB6C5163BF66900CFD839 /* DXTweets.m */,
+				ADEDB699163BF31500CFD839 /* Supporting Files */,
+			);
+			path = DXHTTPKitExample;
+			sourceTree = "<group>";
+		};
+		ADEDB699163BF31500CFD839 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADEDB69A163BF31500CFD839 /* DXHTTPKitExample-Info.plist */,
+				ADEDB69B163BF31500CFD839 /* InfoPlist.strings */,
+				ADEDB69E163BF31500CFD839 /* main.m */,
+				ADEDB6A0163BF31500CFD839 /* DXHTTPKitExample-Prefix.pch */,
+				ADEDB6A4163BF31500CFD839 /* Default.png */,
+				ADEDB6A6163BF31500CFD839 /* Default@2x.png */,
+				ADEDB6A8163BF31500CFD839 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		ADFB0AB3162C99AB00AC5954 = {
 			isa = PBXGroup;
 			children = (
-				EA35D0851639DBD500B714CF /* UIKit.framework */,
 				ADFB0AC3162C99AB00AC5954 /* DXHTTPKit */,
 				ADFB0AD8162C99AB00AC5954 /* DXHTTPKitTests */,
+				ADEDB698163BF31500CFD839 /* DXHTTPKitExample */,
 				ADFB0AC0162C99AB00AC5954 /* Frameworks */,
 				ADFB0ABF162C99AB00AC5954 /* Products */,
 				7B6A58196C7C4D9A8DE45EAD /* Pods-DXHTTPKitTests.xcconfig */,
@@ -274,6 +388,7 @@
 			children = (
 				ADFB0ABE162C99AB00AC5954 /* libDXHTTPKit.a */,
 				ADFB0ACF162C99AB00AC5954 /* DXHTTPKitTests.octest */,
+				ADEDB691163BF31500CFD839 /* DXHTTPKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +401,9 @@
 				ADFB0AD0162C99AB00AC5954 /* SenTestingKit.framework */,
 				178C3258A7284934903EF15F /* libPods-DXHTTPKitTests.a */,
 				1AB56ED0F7DC46308D1D1860 /* libPods.a */,
+				EA35D0851639DBD500B714CF /* UIKit.framework */,
+				ADEDB693163BF31500CFD839 /* UIKit.framework */,
+				ADEDB696163BF31500CFD839 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -462,15 +580,6 @@
 			name = DXHTTPConnectionDescriptor;
 			sourceTree = "<group>";
 		};
-		EA714706163AC10C00E2D698 /* ObjectMapping */ = {
-			isa = PBXGroup;
-			children = (
-				EA714702163AC10900E2D698 /* DXObjectMapping.h */,
-				EA714703163AC10900E2D698 /* DXObjectMapping.m */,
-			);
-			name = ObjectMapping;
-			sourceTree = "<group>";
-		};
 		EA76B4E616309E22004B85CA /* Builders */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +639,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ADEDB690163BF31500CFD839 /* DXHTTPKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADEDB6BE163BF31500CFD839 /* Build configuration list for PBXNativeTarget "DXHTTPKitExample" */;
+			buildPhases = (
+				ADEDB68D163BF31500CFD839 /* Sources */,
+				ADEDB68E163BF31500CFD839 /* Frameworks */,
+				ADEDB68F163BF31500CFD839 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DXHTTPKitExample;
+			productName = DXHTTPKitExample;
+			productReference = ADEDB691163BF31500CFD839 /* DXHTTPKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		ADFB0ABD162C99AB00AC5954 /* DXHTTPKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADFB0AE3162C99AB00AC5954 /* Build configuration list for PBXNativeTarget "DXHTTPKit" */;
@@ -592,11 +718,23 @@
 			targets = (
 				ADFB0ABD162C99AB00AC5954 /* DXHTTPKit */,
 				ADFB0ACE162C99AB00AC5954 /* DXHTTPKitTests */,
+				ADEDB690163BF31500CFD839 /* DXHTTPKitExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ADEDB68F163BF31500CFD839 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEDB69D163BF31500CFD839 /* InfoPlist.strings in Resources */,
+				ADEDB6A5163BF31500CFD839 /* Default.png in Resources */,
+				ADEDB6A7163BF31500CFD839 /* Default@2x.png in Resources */,
+				ADEDB6A9163BF31500CFD839 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADFB0ACC162C99AB00AC5954 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,6 +792,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ADEDB68D163BF31500CFD839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEDB69F163BF31500CFD839 /* main.m in Sources */,
+				ADEDB6A3163BF31500CFD839 /* DXHTTPAppDelegate.m in Sources */,
+				ADEDB6C6163BF66900CFD839 /* DXTweets.m in Sources */,
+				ADEDB6CB163BF9E100CFD839 /* DXHTTPConnectionSource.m in Sources */,
+				ADEDB6CE163BFAFE00CFD839 /* DXHTTPDataMapper.m in Sources */,
+				ADEDB6D1163BFBDC00CFD839 /* DXMappingClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADFB0ABA162C99AB00AC5954 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -676,7 +827,9 @@
 				EA26CC3D1637016A0021D4F3 /* DXHTTPConnection.m in Sources */,
 				EA84653516399BC1007BBDFA /* DXXMLParser.m in Sources */,
 				EA84653E1639A90D007BBDFA /* DXJSONParser.m in Sources */,
-				EA714704163AC10900E2D698 /* DXObjectMapping.m in Sources */,
+				ADEDB687163BF03100CFD839 /* DXConfiguration.m in Sources */,
+				ADEDB688163BF03100CFD839 /* DXObjectMapping.m in Sources */,
+				ADEDB689163BF03100CFD839 /* DXObjectSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +866,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ADEDB69B163BF31500CFD839 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADEDB69C163BF31500CFD839 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		ADFB0ADB162C99AB00AC5954 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -724,6 +885,33 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ADEDB6BF163BF31500CFD839 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A9DE7B4A4F43B1A866DC06 /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DXHTTPKitExample/DXHTTPKitExample-Prefix.pch";
+				INFOPLIST_FILE = "DXHTTPKitExample/DXHTTPKitExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ADEDB6C0163BF31500CFD839 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A9DE7B4A4F43B1A866DC06 /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DXHTTPKitExample/DXHTTPKitExample-Prefix.pch";
+				INFOPLIST_FILE = "DXHTTPKitExample/DXHTTPKitExample-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		ADFB0AE1162C99AB00AC5954 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -836,6 +1024,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ADEDB6BE163BF31500CFD839 /* Build configuration list for PBXNativeTarget "DXHTTPKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADEDB6BF163BF31500CFD839 /* Debug */,
+				ADEDB6C0163BF31500CFD839 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		ADFB0AB8162C99AB00AC5954 /* Build configuration list for PBXProject "DXHTTPKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

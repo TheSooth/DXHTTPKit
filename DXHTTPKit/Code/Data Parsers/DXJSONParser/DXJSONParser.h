@@ -10,5 +10,5 @@
 
 @interface DXJSONParser : NSObject
 
-+ (NSDictionary *)dictionaryForJSONData:(NSData *)aData;
++ (id)dictionaryForJSONData:(NSData *)aData;
 @end

@@ -6,3 +6,7 @@
     #import <Foundation/Foundation.h>
 #define DXParametrAssert(expr, exception_name) do { if (!(expr)) @throw [NSException exceptionWithName:exception_name reason: [NSString stringWithFormat:@"Expression: %s", #expr] userInfo:nil]; } while (0)
 #endif
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+#pragma clang diagnostic pop
